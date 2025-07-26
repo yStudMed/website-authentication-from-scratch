@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome - YA Live Chat ROOM</title>
+    <link rel="stylesheet" href="welcome.css" />
+</head>
+
+<body>
+    <div class="sky">
+        <div class="stars"></div>
+        <div class="moon"></div>
+
+        <!-- Top-right buttons -->
+        <div class="top-right-buttons">
+            <form id="logoutForm" action="/logout" method="POST">
+                <button type="submit">Logout</button>
+            </form>
+            <form id="deleteForm" action="/delete-account" method="POST" onsubmit="return confirmDelete();">
+                <button type="submit">Delete Account</button>
+            </form>
+        </div>
+
+        <div class="welcome-content">
+            <h1>Welcome to</h1>
+            <h2>YA Live Chat Room</h2>
+        </div>
+    </div>
+
+    <!-- Custom Confirm Modal -->
+    <div id="customConfirm" class="modal hidden">
+        <div class="modal-box">
+            <p id="confirmMessage">Are you sure you want to delete your account?</p>
+            <div class="confirm-actions">
+                <button onclick="handleConfirm(true)">Yes</button>
+                <button onclick="handleConfirm(false)">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="welcome.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.sky {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Stars */
+.stars::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow:
+        20px 30px white, 40px 70px white, 70px 20px white,
+        110px 80px white, 160px 50px white, 200px 100px white,
+        250px 150px white, 300px 90px white, 350px 40px white,
+        400px 130px white, 450px 70px white, 500px 110px white;
+}
+
+/* Moon */
+.moon {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at 30% 30%, #fff, #ccc);
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+/* Login Box */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    padding: 30px 40px;
+    max-width: 350px;
+    margin: 100px auto;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-container label {
+    display: block;
+    margin-top: 15px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 6px;
+}
+
+.login-container .actions {
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px 0;
+}
+
+.checkbox-label {
+    font-size: 0.9em;
+    color: #b2d6ff;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #2980b9;
+}
+
+.signup {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.signup a {
+    color: #b2d6ff;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YA Live Chat Rooms</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+    <div class="sky">
+        <div class="moon"></div>
+        <div class="stars"></div>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form method="post">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" minlength="3" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" minlength="3" required />
+
+                <div class="actions">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="show-password" />
+                        Show Password
+                    </label>
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p class="signup">Don't have an account? <a href="signup">Sign up</a></p>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
